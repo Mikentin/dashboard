@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Link Dashboard</title>
+    <meta name="description" content="Удобная панель быстрого доступа к рабочим сайтам и инструментам команды.">
+    <!-- Google Fonts: Outfit for clean, modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@0.415.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- HEADER SECTION -->
+        <header class="dashboard-header">
+            <div class="header-welcome">
+                <h1 id="greeting">Traffic Team Dashboard</h1>
+                <p class="header-subtitle">Быстрый доступ к рабочим ресурсам и инструментам</p>
+            </div>
+            <div class="header-widgets">
+                <div class="widget-time">
+                    <span id="clock">00:00:00</span>
+                    <span id="date" class="widget-date">12 июля 2026</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTROL PANEL SECTION -->
+        <section class="control-panel">
+            <div class="search-wrapper">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="search-input" placeholder="Поиск сайтов... (Нажмите '/' для фокуса)" autocomplete="off">
+                <button id="clear-search" class="clear-btn" title="Очистить поиск (Esc)">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-value" id="stat-total">11</span>
+                    <span class="stat-label">Всего ссылок</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="stat-general">7</span>
+                    <span class="stat-label">Общие</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="stat-team">4</span>
+                    <span class="stat-label">Команда</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD GRID -->
+        <main class="dashboard-grid">
+            
+            <!-- SECTION 1: ОБЩИЕ САЙТЫ -->
+            <section class="links-group-section general-group" id="group-general">
+                <div class="group-header">
+                    <div class="group-title-wrapper">
+                        <div class="group-dot"></div>
+                        <h2>Общие сайты</h2>
+                    </div>
+                    <button class="open-all-btn" id="open-all-general" title="Открыть все общие сайты в новых вкладках">
+                        <i data-lucide="external-link"></i>
+                        <span>Открыть все</span>
+                    </button>
+                </div>
+                
+                <div class="links-grid">
+                    <a href="https://swat.icu/panel" target="_blank" class="link-card" data-name="новый бином swat.icu panel">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <img class="favicon" src="https://swat.icu/assets/logo--NN6B9Ex.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="favicon-fallback">НБ</div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">Новый Бином</span>
+                                <span class="link-url">swat.icu/panel</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://swat.cam/admin.php" target="_blank" class="link-card" data-name="старый бином swat.cam admin.php">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <img class="favicon sb" src="https://swat.icu/assets/logo--NN6B9Ex.png" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="favicon-fallback">СБ</div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">Старый Бином</span>
+                                <span class="link-url">swat.cam/admin.php</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://docs.google.com/spreadsheets/d/1fspBGeCopaJXGHOBzdbfIrRbFw1zEBpvmfq5WceHM5E/edit?gid=0#gid=0" target="_blank" class="link-card" data-name="google таблица docs.google.com sheets spreadsheets">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <img class="favicon" src="https://www.google.com/s2/favicons?sz=64&domain=docs.google.com" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="favicon-fallback">ГТ</div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">Google Таблица</span>
+                                <span class="link-url">docs.google.com</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://gfu.ad" target="_blank" class="link-card" data-name="gfu gfu.ad">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <svg class="gfu-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 91.6 75" xml:space="preserve" width="24" height="24" class="uk-margin-small-right uk-svg"> <style type="text/css"> .st0{fill:#4285F4;} .st1{fill:#34A853;} .st2{fill:#FBBC02;} .st3{fill:#EA4335;} </style> <path class="st0" d="M62.2,65.9c8.9-8.3,12.8-22,10.4-35.2H37.4v14.6h20.1c-0.8,4.7-3.5,8.7-7.5,11.2L62.2,65.9z"></path> <path class="st1" d="M3.9,54.3c9.4,18.6,32.2,26,50.8,16.6c2.7-1.4,5.2-3,7.5-5L50,56.5c-10.4,6.9-27.8,4.3-33.7-11.8L3.9,54.3z"></path> <path class="st2" d="M16.3,44.7c-1.6-4.9-1.6-9.4,0-14.4L3.9,20.6c-4.5,9.1-5.9,21.9,0,33.7L16.3,44.7z"></path> <path class="st3" d="M16.3,30.3c4.3-13.6,22.8-21.5,35.2-9.8L62.4,9.8C47-5,17.1-4.4,3.9,20.6L16.3,30.3z"></path> <circle class="st2" cx="84" cy="28.2" r="7.5"></circle> <circle class="st2" cx="84" cy="46.7" r="7.5"></circle> </svg>
+                                <div class="favicon-fallback">GF</div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">GFU</span>
+                                <span class="link-url">gfu.ad</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://abcard.io/wallet" target="_blank" class="link-card" data-name="abcard abcard.io wallet">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <img class="favicon" src="https://www.google.com/s2/favicons?sz=64&domain=abcard.io" alt="" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="favicon-fallback">AB</div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">Abcard</span>
+                                <span class="link-url">abcard.io/wallet</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://app.mtwspy.com" target="_blank" class="link-card" data-name="mtw spy app.mtwspy.com">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <svg class="mtw-icon" viewBox="0 0 44 44" class="msb__logo-mark" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M31.6512 43.8243H12.1735C5.45374 43.8243 0 38.3706 0 31.6508V12.1732C0 5.45337 5.45374 -0.000366211 12.1735 -0.000366211H31.6512C38.3709 -0.000366211 43.8247 5.45337 43.8247 12.1732V31.6508C43.8247 38.3949 38.3709 43.8243 31.6512 43.8243Z" fill="#1F1F1F"></path> <path d="M17.043 10.9559C17.043 8.93891 18.6781 7.30383 20.6951 7.30383H32.8686C34.8856 7.30383 36.5207 8.93892 36.5207 10.9559V23.1294C36.5207 25.1464 34.8856 26.7815 32.8686 26.7815H20.6951C18.6781 26.7815 17.043 25.1464 17.043 23.1294V10.9559Z" fill="#41b690"></path> <path d="M15.8692 12.1732C15.8407 12.3721 15.8256 12.5753 15.8256 12.7819V23.7381C15.8256 26.0912 17.7334 27.9988 20.0865 27.9988H31.0427C31.2493 27.9988 31.4524 27.9836 31.6511 27.9552V27.9988C31.6511 30.0158 30.0161 31.6508 27.9992 31.6508H15.8256C13.8086 31.6507 12.1736 30.0157 12.1736 27.9988V15.8252C12.1737 13.8083 13.8087 12.1733 15.8256 12.1732H15.8692Z" fill="#7fd3b4"></path> <path d="M10.9998 17.0427C10.9713 17.2415 10.9562 17.4447 10.9562 17.6514V28.6075C10.9562 30.9606 12.864 32.8682 15.2171 32.8682H26.1733C26.3799 32.8682 26.583 32.853 26.7817 32.8246V32.8682C26.7817 34.8852 25.1467 36.5202 23.1298 36.5202H10.9562C8.93923 36.5201 7.3042 34.8851 7.3042 32.8682V20.6946C7.30425 18.6777 8.93926 17.0427 10.9562 17.0427H10.9998Z" fill="#b9e6d6"></path> </svg>
+                                <div class="favicon-fallback">MT</div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">MTW Spy</span>
+                                <span class="link-url">app.mtwspy.com</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://app.tyver.io/" target="_blank" class="link-card" data-name="tyver app.tyver.io">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <svg class="mtw-icon" viewBox="0 0 30 30" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="css-1szjs6r"><path d="M16.3831 16.4423C16.3831 15.805 16.9165 15.2885 17.5745 15.2885H21.7448C22.4028 15.2885 22.9362 15.805 22.9362 16.4423V27.9808C22.9362 28.618 22.4028 29.1346 21.7448 29.1346H17.5745C16.9165 29.1346 16.3831 28.618 16.3831 27.9808V16.4423Z" fill="#DCE7FE"></path><path d="M16.3831 8.07694C16.3831 7.43969 16.9165 6.9231 17.5745 6.9231H21.7448C22.4028 6.9231 22.9362 7.43969 22.9362 8.07694V12.6923C22.9362 13.3296 22.4028 13.8462 21.7448 13.8462H17.5745C16.9165 13.8462 16.3831 13.3296 16.3831 12.6923V8.07694Z" fill="#1563FF"></path><path d="M8.04248 1.15385C8.04248 0.516594 8.57593 0 9.23397 0H13.7021C14.3601 0 14.8935 0.516595 14.8935 1.15385V12.6923C14.8935 13.3296 14.3601 13.8462 13.7021 13.8462H9.23397C8.57593 13.8462 8.04248 13.3296 8.04248 12.6923V1.15385Z" fill="#DCE7FE"></path><path d="M0 1.15385C0 0.516594 0.533448 0 1.19149 0H5.65957C6.31762 0 6.85106 0.516595 6.85106 1.15385V12.6923C6.85106 13.3296 6.31762 13.8462 5.65957 13.8462H1.19149C0.533448 13.8462 0 13.3296 0 12.6923V1.15385Z" fill="#DCE7FE"></path><path d="M8.04248 16.4423C8.04248 15.805 8.57593 15.2885 9.23397 15.2885H13.7021C14.3601 15.2885 14.8935 15.805 14.8935 16.4423V27.9808C14.8935 28.618 14.3601 29.1346 13.7021 29.1346H9.23397C8.57593 29.1346 8.04248 28.618 8.04248 27.9808V16.4423Z" fill="#1563FF"></path><path d="M0 16.4423C0 15.805 0.533448 15.2885 1.19149 15.2885H5.3617C6.01974 15.2885 6.55319 15.805 6.55319 16.4423V21.0577C6.55319 21.6949 6.01974 22.2115 5.3617 22.2115H1.19149C0.533448 22.2115 0 21.6949 0 21.0577V16.4423Z" fill="#1563FF"></path><path d="M0 16.4423C0 15.805 0.533448 15.2885 1.19149 15.2885H5.3617C6.01974 15.2885 6.55319 15.805 6.55319 16.4423V21.0577C6.55319 21.6949 6.01974 22.2115 5.3617 22.2115H1.19149C0.533448 22.2115 0 21.6949 0 21.0577V16.4423Z" fill="#1563FF"></path></svg>
+                                <div class="favicon-fallback">TV</div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">Tyver</span>
+                                <span class="link-url">app.tyver.io</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SECTION 2: САЙТЫ НАШЕЙ КОМАНДЫ -->
+            <section class="links-group-section team-group" id="group-team">
+                <div class="group-header">
+                    <div class="group-title-wrapper">
+                        <div class="group-dot"></div>
+                        <h2>Сайты нашей команды</h2>
+                    </div>
+                    <button class="open-all-btn" id="open-all-team" title="Открыть все командные сайты в новых вкладках">
+                        <i data-lucide="external-link"></i>
+                        <span>Открыть все</span>
+                    </button>
+                </div>
+                
+                <div class="links-grid">
+                    <a href="https://danil-tkachuk.github.io/aspect-ratio-stretcher" target="_blank" class="link-card" data-name="aspect ratio stretcher danil-tkachuk github aspect-ratio-stretcher">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <div class="site-dot"></div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">Aspect Ratio Stretcher</span>
+                                <span class="link-url">danil-tkachuk.github.io</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://video-loader-education.vercel.app" target="_blank" class="link-card" data-name="youtube loader video-loader-education vercel app">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <div class="site-dot"></div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">YouTube Loader</span>
+                                <span class="link-url">video-loader-education.vercel.app</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://script-vault-eight.vercel.app" target="_blank" class="link-card" data-name="script vault danil-tkachuk github script-vault">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <div class="site-dot"></div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">Script Vault</span>
+                                <span class="link-url">script-vault-eight.vercel.app</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://danil-tkachuk.github.io/domain-checker" target="_blank" class="link-card" data-name="domain checker danil-tkachuk github domain-checker">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="favicon-wrapper">
+                                <div class="site-dot"></div>
+                            </div>
+                            <div class="link-info">
+                                <span class="link-title">Domain Checker</span>
+                                <span class="link-url">danil-tkachuk.github.io</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+        </main>
+
+        <!-- LOGO FLAGS SECTION -->
+        <section class="flags-section">
+            <button class="flags-toggle-btn" id="flags-toggle" aria-expanded="false">
+                <div class="toggle-title">
+                    <i data-lucide="flag"></i>
+                    <span>Logo flags</span>
+                </div>
+                <i data-lucide="chevron-down" class="chevron-icon"></i>
+            </button>
+            <div class="flags-container collapsed" id="flags-container">
+                <div class="flags-grid" id="flags-grid">
+                    <!-- Loaded dynamically via app.js -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <p>&copy; 2026 Traffic Team Dashboard &bull; Danil Tkachuk</p>
+        </footer>
+    </div>
+
+    <!-- JS logic script -->
+    <script src="app.js"></script>
+</body>
+</html>
