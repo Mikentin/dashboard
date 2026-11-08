@@ -192,7 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'PT', file: 'PT-flag.png' },
         { name: 'RS', file: 'RS-flag.png' },
         { name: 'SI', file: 'SI-flag.png' },
-        { name: 'SK', file: 'SK-flag.png' }
+        { name: 'SK', file: 'SK-flag.png' },
+        { name: 'MN', file: 'MN-flag.jpeg' },
     ];
 
     const flagsGrid = document.getElementById('flags-grid');
